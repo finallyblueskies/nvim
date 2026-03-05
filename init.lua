@@ -198,6 +198,13 @@ vim.lsp.config('sourcekit', {
 	cmd = { 'xcrun', 'sourcekit-lsp' },
 	filetypes = { 'swift' },
 	root_markers = { 'buildServer.json', '*.xcodeproj', '*.xcworkspace', 'Package.swift', '.git' },
+	capabilities = {
+		workspace = {
+			didChangeWatchedFiles = {
+				dynamicRegistration = true,
+			},
+		},
+	},
 })
 
 vim.lsp.enable('sourcekit')
