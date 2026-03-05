@@ -20,6 +20,8 @@ vim.g.mapleader = " "         -- Space as leader key
 vim.g.maplocalleader = "\\"   -- Backslash as local leader
 vim.o.clipboard = "unnamedplus" -- Use system clipboard for yank/paste
 vim.opt.number = true           -- Show line numbers
+vim.opt.scrolloff = 8           -- Keep 8 lines visible above/below cursor
+vim.opt.termguicolors = true    -- 24-bit RGB colors
 
 -- Plugin declarations via lazy.nvim
 require("lazy").setup({
@@ -99,7 +101,7 @@ require("lazy").setup({
 		},
 	},
 	-- Auto-check for plugin updates
-	checker = { enabled = true },
+	checker = { enabled = true, notify = false },
 })
 
 -- <leader>ff: find files (respects .gitignore, includes hidden files)
