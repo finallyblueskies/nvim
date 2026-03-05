@@ -86,7 +86,7 @@ require("lazy").setup({
 		},
 		-- Diffview: side-by-side git diffs and file history
 		{
-			'sindrets/diffview.nvim',
+			'dlyongemallo/diffview.nvim',
 			cmd = { 'DiffviewOpen', 'DiffviewFileHistory', 'DiffviewClose' },
 			keys = {
 				{ '<leader>gd', '<cmd>DiffviewOpen<cr>', desc = 'Git diff (all files)' },
@@ -95,7 +95,7 @@ require("lazy").setup({
 				{ '<leader>gm', '<cmd>DiffviewOpen main<cr>', desc = 'Git diff vs main' },
 				{ '<leader>gq', '<cmd>DiffviewClose<cr>', desc = 'Close diffview' },
 			},
-			opts = {},
+			opts = { use_icons = false },
 		},
 	},
 	-- Auto-check for plugin updates
